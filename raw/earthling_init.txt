@@ -1,0 +1,39 @@
+# earthling_init.txt
+
+:lua print(' ')
+:lua print('Earthling reactions +')
+
+
+########## SUMMONING ###########
+modtools/reaction-trigger -reactionName EL_GARGOYLE_BONE -command [ modtools/create-unit -race EL_GARGOYLE -caste BONE -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_BONE_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste BONE -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_WOOD -command [ modtools/create-unit -race EL_GARGOYLE -caste WOOD -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_WOOD_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste WOOD -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_STONE -command [ modtools/create-unit -race EL_GARGOYLE -caste STONE -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_STONE_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste STONE -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_METAL -command [ modtools/create-unit -race EL_GARGOYLE -caste METAL -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_METAL_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste METAL -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_CHARCOAL -command [ modtools/create-unit -race EL_GARGOYLE -caste CHARCOAL -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_CHARCOAL_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste CHARCOAL -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_GLASS -command [ modtools/create-unit -race EL_GARGOYLE -caste GLASS -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_GLASS_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste GLASS -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_GEM -command [ modtools/create-unit -race EL_GARGOYLE -caste GEM -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_GEM_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste GEM -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_CLAY -command [ modtools/create-unit -race EL_GARGOYLE -caste CLAY -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_GARGOYLE_CLAY_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste CLAY -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
+
+modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_ELEMENTAL -command [ modtools/create-unit -race EL_EARTH_ELEMENTAL -location [ \\LOCATION ] -domesticate -setUnitToFort -age 500 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_ELEMENTAL_X20 -command [ modtools/create-unit -race EL_EARTH_ELEMENTAL -location [ \\LOCATION ] -domesticate -setUnitToFort -age 500 -quantity 20 ]
+
+
+#### Fix ####
+# autofixhandedness from Masterwork mod
+autofixhandedness start
+# smartpets from Masterwork mod / Boltgun
+fix/smartpets
+# Sentient Butchering fix by burrito25man
+fix/fix-sentient-butcher
+
+:lua print(' ')
+:lua print('Earthling reactions -')
+
