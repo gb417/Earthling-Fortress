@@ -4,10 +4,10 @@ building_earthling
 
 // Workshops
 
-[BUILDING_WORKSHOP:EL_EARTH_TEMPLE] //copy from soap maker
-	[NAME:Earth Temple]
+[BUILDING_WORKSHOP:EL_EARTH_ALTAR] //copy from soap maker
+	[NAME:Earth Altar]
 	[NAME_COLOR:7:0:1]
-	[BUILD_LABOR:MASON]
+	[BUILD_LABOR:ANIMALTRAIN]
 	[BUILD_KEY:CUSTOM_T]
 	[DIM:3:3]
 	[WORK_LOCATION:2:2]
@@ -115,7 +115,7 @@ building_earthling
 [BUILDING_WORKSHOP:EL_ALCHEMIST_WORKSHOP] //copy from soap maker
 	[NAME:Alchemist Workshop]
 	[NAME_COLOR:7:0:1]
-	[BUILD_LABOR:MASON]
+	[BUILD_LABOR:ALCHEMIST]
 	[BUILD_KEY:CUSTOM_L]
 	[DIM:3:3]
 	[WORK_LOCATION:2:2]

@@ -31,9 +31,9 @@ plant_earthling
 	
 	[USE_MATERIAL_TEMPLATE:DRINK:PLANT_ALCOHOL_TEMPLATE]
 		The material template is just called "alcohol" so we need to give it a proper name.
-		[STATE_NAME_ADJ:ALL_SOLID:frozen earthling wine]
-		[STATE_NAME_ADJ:LIQUID:earthling wine]
-		[STATE_NAME_ADJ:GAS:boiling earthling wine]
+		[STATE_NAME_ADJ:ALL_SOLID:frozen earthling beer]
+		[STATE_NAME_ADJ:LIQUID:earthling beer]
+		[STATE_NAME_ADJ:GAS:boiling earthling beer]
 		We also set a few more numbers to distinguish the alcohol from the template.
 		[MATERIAL_VALUE:2]
 		[DISPLAY_COLOR:5:0:0]

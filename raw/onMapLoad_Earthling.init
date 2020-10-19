@@ -1,0 +1,10 @@
+
+#################### Script files for entity: ####################
+modtools/if-entity -id "EL_BURROW" -cmd [ script "raw/earthling.init" ]
+
+#### Trigger on map ####
+modtools/syndrome-trigger -syndrome "EL_REPAIR" -command [ full-heal -unit \\UNIT_ID ]
+modtools/syndrome-trigger -syndrome "EL_REPAIR" -command [ fillneeds -unit \\UNIT_ID ]
+modtools/projectile-trigger -material INORGANIC:EL_ALCHBOLT_POISON -command [ modtools/spawn-flow -material INORGANIC:EL_POISON_SMOKE -location [ \\LOCATION ] -flowType MaterialGas -flowSize 50000 ]
+modtools/projectile-trigger -material INORGANIC:EL_ALCHBOLT_ICE -command [ modtools/spawn-flow -material WATER -location [ \\LOCATION ] -flowType Web -flowSize 50000 ]
+modtools/projectile-trigger -material INORGANIC:EL_ALCHBOLT_FIRE -command [ modtools/spawn-flow -material COAL:CHARCOAL -location [ \\LOCATION ] -flowType Fire -flowSize 50000 ]

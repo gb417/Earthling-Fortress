@@ -57,5 +57,5 @@ if df.global.gamemode == df.game_mode.DWARF then
 	end
 
 	scanForPetsWithNoNemesis()
-	dfhack.timeout(3, 'days', function() dfhack.run_script('fix/smartpets') end)
+	dfhack.timeout(3, 'days', function() dfhack.run_script('earthling/smartpets') end)
 end

@@ -1,10 +1,5 @@
-# earthling_init.txt
 
-:lua print(' ')
-:lua print('Earthling reactions +')
-
-
-########## SUMMONING ###########
+### REACTION TRIGGER ####
 modtools/reaction-trigger -reactionName EL_GARGOYLE_BONE -command [ modtools/create-unit -race EL_GARGOYLE -caste BONE -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
 modtools/reaction-trigger -reactionName EL_GARGOYLE_BONE_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste BONE -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
 modtools/reaction-trigger -reactionName EL_GARGOYLE_WOOD -command [ modtools/create-unit -race EL_GARGOYLE -caste WOOD -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
@@ -22,18 +17,22 @@ modtools/reaction-trigger -reactionName EL_GARGOYLE_GEM_X20 -command [ modtools/
 modtools/reaction-trigger -reactionName EL_GARGOYLE_CLAY -command [ modtools/create-unit -race EL_GARGOYLE -caste CLAY -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 1 ]
 modtools/reaction-trigger -reactionName EL_GARGOYLE_CLAY_X20 -command [ modtools/create-unit -race EL_GARGOYLE -caste CLAY -name EL_BURROW -location [ \\LOCATION ] -setUnitToFort -age 1 -quantity 20 ]
 
-modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_ELEMENTAL -command [ modtools/create-unit -race EL_EARTH_ELEMENTAL -location [ \\LOCATION ] -domesticate -setUnitToFort -age 500 -quantity 1 ]
-modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_ELEMENTAL_X20 -command [ modtools/create-unit -race EL_EARTH_ELEMENTAL -location [ \\LOCATION ] -domesticate -setUnitToFort -age 500 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_ELEMENTAL -command [ modtools/create-unit -race EL_EARTH_ELEMENTAL -location [ \\LOCATION ] -domesticate -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_ELEMENTAL_X20 -command [ modtools/create-unit -race EL_EARTH_ELEMENTAL -location [ \\LOCATION ] -domesticate -setUnitToFort -age 1 -quantity 20 ]
+modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_GOLEM -command [ modtools/create-unit -race EL_EARTH_GOLEM -location [ \\LOCATION ] -domesticate -setUnitToFort -age 1 -quantity 1 ]
+modtools/reaction-trigger -reactionName EL_PRAY_FOR_EARTH_GOLEM_X20 -command [ modtools/create-unit -race EL_EARTH_GOLEM -location [ \\LOCATION ] -domesticate -setUnitToFort -age 1 -quantity 20 ]
 
+#### Script ####
+repeat -name "enslavement_script" -time 8400 -timeUnits "ticks" -command [ earthling/enslavement_earthling ]
+repeat -name "fix_noexert_units_script" -time 1200 -timeUnits "ticks" -command [ earthling/fix-noexert-units_earthling ]
 
 #### Fix ####
-# autofixhandedness from Masterwork mod
-autofixhandedness start
+tweak reaction-gloves
+fix/loyaltycascade
 # smartpets from Masterwork mod / Boltgun
-fix/smartpets
+earthling/smartpets
 # Sentient Butchering fix by burrito25man
-fix/fix-sentient-butcher
+earthling/fix-sentient-butcher
 
-:lua print(' ')
-:lua print('Earthling reactions -')
-
+#### New Fortress ####
+on-new-fortress earthling/deep-embark -depth CAVERN_1
